@@ -9,7 +9,13 @@
   "build": {
     "command": "npm run build"
   },
-  // Set this secret via: wrangler secret put CRM_PASSWORD
-  // Then enter your chosen password when prompted
-  "vars": {}
+  // After running: wrangler d1 create nokasa-crm-db
+  // copy the database_id printed in terminal and paste it below
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nokasa-crm-db",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+    }
+  ]
 }
